@@ -1,12 +1,12 @@
 # projecttwo
 
-## Lyrical Fun/ Events
+## Lyrical Fun
 
 
-### Option 1: Search a String to find out details of the song and artist who's lyrics match the song. 
-### Option 2: Search by location to find Events near you.
+### Option 1: Search a Song Name to find the lyrics
 
-##### The premise of both of these is to create a history and save events in a form to the users profile. 
+
+##### The premise is to create a history and save events in a form to the users profile. 
 
 ###### Steps
 
@@ -14,18 +14,18 @@
 
 2. Once you are logged in, there is an announcement at the top of the page for you user.
 
-3. There will be an index page that you can edit and delete as well as click on to render a shown page of each either lyric and event that will give you a description of each item. 
+3. There will be an index page of all your saved searches that you can edit and delete as well as click on to render the show page with either then lyrics or the data on the song. 
 
-4. The opening page will be a search bar that utilizes the API which will be a new page, and after you search you will redirect to a show page.
+4. The opening page will be a search bar that utilizes the API which will be a new page, and after you search you will recieve an show page of the song with lyrics or song information
 
 5. There will be logout links on the top of the page.
 
 6. There will be a user profile link at the top of the page
 
-7. The user profile should have all past searches (link to an index page).
+7. The user profile should have all past searches and ability to comment on each song/lyric to make notes.
 
 
-Models - Song Information which involves the title name and the artist as well as date and genre. There will also be a comment model as well
+Models - Song Information/Lyrics
 
 Many Comments to One Song
 comments have userid/reference to user
@@ -51,6 +51,7 @@ ERD
 
 Technologies - HTML, CSS, Mongoose, JavaScript, Liquid, Express, Bcrypt
 API - https://docs.ksoft.si/api/lyrics-api
+Another API - https://developer.musixmatch.com/documentation
 
 Long term stretch goal - More CSS.(Dribble)
 Adding some sort of recommendation section for the user to possible find either artists/songs or events they may like or adding something to redirect them to the artists work
