@@ -37,6 +37,6 @@ Models - Song Information which involves the title name and the artist as well a
 
 
 Technologies - HTML, CSS, Mongoose, JavaScript, Liquid, Express, Bcrypt
-
+API - https://docs.ksoft.si/api/lyrics-api
 
 Long term stretch goal - Adding some sort of recommendation section for the user to possible find either artists/songs or events they may like or adding something to redirect them to the artists work
