@@ -33,7 +33,8 @@ Models - Song Information which involves the title name and the artist as well a
 ![start](img/three.png)
 ![start](img/four.png)
 
-
+ERD
+![start](img/erd.png)
 
 
 Technologies - HTML, CSS, Mongoose, JavaScript, Liquid, Express, Bcrypt
