@@ -27,6 +27,17 @@
 
 Models - Song Information which involves the title name and the artist as well as date and genre. There will also be a comment model as well
 
+Many Comments to One Song
+comments have userid/reference to user
+Comment will have an Owner
+Meta data may be linked to spotify 
+
+Song Key-Value Pair:
+Name: 
+Artist: 
+Year:
+Album: 
+Possibly Genre: 
 
 ![start](img/one.png)
 ![start](img/two.png)
@@ -35,9 +46,12 @@ Models - Song Information which involves the title name and the artist as well a
 
 ERD
 ![start](img/erd.png)
+![start](img/erd2.png)
 
 
 Technologies - HTML, CSS, Mongoose, JavaScript, Liquid, Express, Bcrypt
 API - https://docs.ksoft.si/api/lyrics-api
 
-Long term stretch goal - Adding some sort of recommendation section for the user to possible find either artists/songs or events they may like or adding something to redirect them to the artists work
+Long term stretch goal - More CSS.(Dribble)
+Adding some sort of recommendation section for the user to possible find either artists/songs or events they may like or adding something to redirect them to the artists work
+-changing show page color based on genre 
