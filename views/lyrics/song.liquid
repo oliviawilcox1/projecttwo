@@ -1,0 +1,55 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+<div class="container-md">
+    <article>
+       <div class="text-center"> 
+            <h1> {{ lyrics.song }} by {{ lyrics.artist }} </h1> 
+                <p> {{ lyrics.lyric }}</p>
+       </div>
+  
+       <a href="/lyrics/mine"><button class="btn btn-light">Go To My Saved Songs</button></a>
+       <a href="/lyrics"><button class="btn btn-light">Go Back To All Searches</button></a>
+    </article>
+</br>
+
+<div class="col-md-6">
+    <form action="/comments/{{lyrics.id}}" method="POST">
+        <fieldset>
+            <legend> Add Comment</legend>
+            <label class="form-label">Comment:</label>
+            <input type="text" class="form-control" name="note" placeholder="Enter Comment Here">
+        
+            
+        </fieldset>
+        <input type="submit" class="btn btn-dark" value="Add Comment">
+    </form>
+</div>
+<!-- we need anif statement
+this will solve a potential problem 
+if fruit has no comments we wont try and show -->
+{% if lyrics.comments.length > 0 %}
+<!-- here we'll add our comment container  -->
+<div class="container-sm justify-content-center">
+<div class="col-md-8 col-lg-6">
+<!-- here we need to loop over comments -->
+<!-- for every comment render a comment.liquid -->
+{% for comment in lyrics.comments %}
+    {% render '../comment.liquid',
+     comment: comment, 
+     userId: userId, 
+     lyric: lyric %}
+
+{% endfor %}
+</div>
+</div>
+{% endif %}
+
+
+
+
+
+
+
+    
+</div>
+{% endblock %}

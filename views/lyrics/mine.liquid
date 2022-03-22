@@ -1,0 +1,23 @@
+{% layout 'layout.liquid'%}
+{% block content %}
+    <div>
+         <h2 class="text-center"> My Favorite Songs </h2></br>
+    </div>
+    <div class="container-sm">
+         
+        <ol>
+        {% for lyric in lyrics %}  
+            <li > 
+                <a href="/lyrics/{{lyric._id}}"><h2 class="text-left">{{lyric.song}} By {{lyric.artist}}</h2></a> 
+                <!-- <p class="text-center"> {{lyric.lyric}} </p> -->
+            </li>
+
+         <a href="/lyrics/{{ lyric._id }}/edit" class="btn btn-light">Edit</a>
+            <form action="/lyrics/{{ lyric._id }}?_method=DELETE" method="POST">
+                <input type="submit" value="Delete" class="btn btn-dark">
+            </form>  
+        
+        {% endfor %}
+        </ol>
+    </div>
+{% endblock %}

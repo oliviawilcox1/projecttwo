@@ -1,0 +1,21 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+<div class="container-md">
+    <article>
+        <form action="/lyrics/mine" method="POST">
+        <h2>
+            {{ song }} -
+        </h2>
+        <h3>By: {{ artist }}</h3>
+        <p class="text-center">{{lyricData.lyrics}} </p>
+
+            <button type="submit">Add to Favorites!</button>
+            <input type="hidden" id="postId" name="song" value="{{song}}">
+            <input type="hidden" id="postId" name="artist" value="{{artist}}">
+          <input type="hidden" id="postId" name="lyric" value="{{lyricData.lyrics}}">
+        
+        </form>
+
+    </article>
+</div>
+{% endblock %}

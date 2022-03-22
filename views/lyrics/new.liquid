@@ -1,0 +1,32 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+<div class="container-sm text-center">
+    <form action="/lyrics/search" method="POST">
+        <fieldset>
+            <h1 class="text-center"> Find That Song! </h1>
+                <div class="text-center">
+                    <legend class="text-center"> Search for Lyrics by Artist and Song Title! </legend>
+                    <label class="form-label text-center"> 
+                        Search: </label>
+                        <input 
+                        type="text"
+                        name="artist"
+                        placeholder="Enter Artist Here!"
+                        class="form-control text-center"
+                        required
+                        >
+                        <input 
+                        type="text"
+                        name="song"
+                        placeholder="Enter Song name Here!"
+                        class="form-control text-center"
+                        required
+                        >
+                    </fieldset>
+                <input type="submit" value="Search for Lyrics" class="btn btn-dark">
+            </form>
+        </div>
+    </br>
+    </div>
+    {% endblock %}
+    

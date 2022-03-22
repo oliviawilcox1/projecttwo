@@ -1,0 +1,33 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+<div class="container-sm">
+    <form action="/lyrics/{{lyrics.id}}?_method=PUT" method="POST">
+        <fieldset>
+            <legend> Edit </legend>
+            <label class="form-label">Change The Song Name: </label>
+            <input 
+                type="text" 
+                name="song" 
+                value="{{ lyrics.song }}"
+                class="form-control"
+            >
+            <label class="form-label">Change The Artist:</label>
+            <input 
+                type="text" 
+                name="artist" 
+            
+                value="{{ lyrics.artist }}" 
+                class="form-control"
+            >
+            <label class="form-label">Lyrics:</label>
+            <input 
+                type="text" 
+                name="lyric"
+                value="{{ lyrics.lyric }}"
+                class="form-control"
+            >
+        </fieldset>
+        <input type="submit" value="Edit Example" class="btn btn-dark">
+    </form>
+</div>
+{% endblock %}

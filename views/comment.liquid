@@ -1,0 +1,20 @@
+{% block content %}
+
+
+<div class="card mb-4 shadow">
+    <div class="card-body">
+        <p>{{ comment.note }} </p>
+        <div class="d-flex justify-content-between">
+            <small> author: {{ comment.author }} </small>
+
+        <!-- {% if comment.author == user.id %}
+            <form action="/comments/delete/{{ lyrics._id}}/{{comment._id}}?_method=DELETE" method="POST">
+                <input type="submit" value="X">
+            </form>
+            {% endif %} -->
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
